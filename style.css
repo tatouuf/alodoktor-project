@@ -1,0 +1,275 @@
+body {
+    margin: 0 ;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: "Oswald",sans-serif;
+    font-style: oblique;
+    font-size: smaller;
+    
+}
+.header {
+    background-color: #dbdbdb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px; 
+    height: 10px;
+}
+.logo{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+}
+.fa-stethoscope{
+    font-size: 21px;
+    padding-right: 6px;
+    color: #2d88fd;
+}
+#aldoktor-name{
+    color: #2d88fd;
+    font-size: 24px;
+}
+.header-links{
+    padding-left: 460px;
+}
+.header-links a {
+    padding: 6px 9px;
+    color: #666666;
+    text-decoration: none;
+}
+.header-links a:hover{
+    color: #2d88fd;
+}
+.btn1{
+    justify-content: center;
+    align-items: center;
+    color:#dbdbdb ;
+    background-color: #2d88fd;
+    border: none;
+    font-family: "Oswald", sans-serif;
+    font-style: oblique;
+} 
+.landing-page {
+    position: relative;
+    width: 100%;
+    height: 750px;
+    overflow: hidden;
+}
+.landing-page img {
+    width: 100%;
+    height: 550px;
+    position:absolute;
+    top: 0;
+    left: 0;
+    border-top: 3px solid #2d88fd;
+    border-bottom: 3px solid #2d88fd;
+    box-sizing: border-box;
+    filter: brightness(85%); /* Rend l'image plus sombre */
+    z-index: -1;
+}
+.landing-details{
+    position: relative;
+    left: 10%;
+    top: 0;
+    z-index: 1;
+}
+.slogan1 {
+    position: relative; /* Il sera au-dessus de l'image */
+    color: #4d4d4d; /* Texte en blanc pour être visible */
+    margin-bottom: 0;
+    font-size: 4rem; /* Taille du texte */
+    font-weight: 300;
+    z-index: 1; /* S'assure que le texte est au premier plan */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ombre pour plus de lisibilité */
+    position: relative;
+}
+.slogan2 {
+    position: relative; /* Il sera au-dessus de l'image */
+    color: #4d4d4d; /* Texte en blanc pour être visible */
+    margin: 0;
+    font-size: 2rem; /* Taille du texte */
+    font-weight: 300;
+    z-index: 1; /* S'assure que le texte est au premier plan */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ombre pour plus de lisibilité */
+    position: relative;
+}
+.slogan3{
+    position: relative; /* Il sera au-dessus de l'image */
+    color: #4d4d4d; /* Texte en blanc pour être visible */
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 2rem; /* Taille du texte */
+    font-weight: 300;
+    z-index: 1; /* S'assure que le texte est au premier plan */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ombre pour plus de lisibilité */
+    position: relative;
+}
+.landing-btn{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 370px;
+}
+.btn2{
+    justify-content: center;
+    align-items: center;
+    color:#dbdbdb ;
+    background-color: #2d88fd;
+    border: none;
+    font-family: "Oswald", sans-serif;
+    font-style: oblique;
+    font-size: 19px;
+    width: 140px;
+    height: 40px;
+}
+.btn3{    
+    justify-content: center;
+    align-items: center;
+    color:#4d4d4d ;
+    background-color: #dbdbdb;
+    border: none;
+    font-family: "Oswald", sans-serif;
+    font-style: oblique;
+    font-size: 19px;
+    width: 210px;
+    height: 40px;
+}
+.btn2:hover{
+    color: #4d4d4d;
+}
+.btn3:hover{
+    color: #2d88fd;
+}
+#tab{
+    z-index: 1;
+    position: relative;
+    align-items: center; 
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 120px;
+    border-color: #2d88fd;
+    border:30px ;
+}
+#box1{
+    border: 2px solid #2d88fd; /* Bordure pour chaque cellule */
+    padding: 20px;
+    background-color: #147afd;
+    width: 250px;
+    text-align: center; /*Centraliser Le text*/
+}
+#box2{
+    border: 2px solid #2d88fd; /* Bordure pour chaque cellule */
+    padding: 20px;
+    background-color: #2d88fd;
+    width: 250px;
+    text-align: center; /*Centraliser Le text*/
+}
+#box3{
+    border: 2px solid #2d88fd; /* Bordure pour chaque cellule */
+    padding: 20px;
+    background-color: #4696fd;
+    width: 250px;
+    text-align: center; /*Centraliser Le text*/
+}
+#landing-icons {
+    color: white;
+    font-size: 40px;
+}
+#landing-box-p{
+    color: white;
+    font-size: 18px;
+}
+.landing-box-btn{
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    width: 160px;
+    height: 35px;
+    font-family: "Oswald", sans-serif;
+    font-style: oblique;
+    font-size: 14px;
+}
+#box1 button:hover{
+    color: #147afd;
+    background-color: white;
+}
+#box2 button:hover{
+    color: #2d88fd;
+    background-color: white;
+}
+#box3 button:hover{
+    color: #4696fd;
+    background-color: white;
+}
+
+.access-page{
+    background-color: #dbdbdb;
+    margin: 0;
+    padding: 10px ;
+    display: flex;
+    justify-content: space-around;
+    border-top: #2d88fd solid 3px;
+}
+#access-plan-h4{
+    color: #4d4d4d;
+    margin:0 ;
+    padding: 6px 6px 6px 0;
+}
+.carte{
+    width: 200px;
+    height: 200px;
+}
+.access-plan-p {
+    color: #4d4d4d;
+    margin:0 ;
+    padding: 0;
+}
+.access-plan-a{
+    color: #4d4d4d;
+    margin:0 ;
+    padding: 0;
+    text-decoration: none;
+}
+.contact-line{
+    color: #4d4d4d;
+    display: flex;
+    padding-bottom: 5px;
+    align-items: center;
+}
+#access-page-icons{
+    padding-right: 6px;
+}
+
+.copyright-page{
+    background-color: #2d88fd;
+    color: white;
+    margin: 0;
+    border: #2d88fd solid 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 9px;
+}
+.copyrigt{
+    display: flex;
+    align-items: center;
+}
+#copyright-page-icon{
+    padding: 0 4px 0 4px;
+    font-size: 10px;
+}
+.copyright-page-p{
+    font-size: 12px;
+}
+
+
+
