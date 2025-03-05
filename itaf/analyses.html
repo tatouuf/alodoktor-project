@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyses Médicales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 20px;
+            position: relative; /* Permet le positionnement du logo */
+        }
+        
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px; /* Pour éviter que le contenu touche le logo */
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        th {
+            background-color: rgb(175, 19, 19);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo positionné en haut à gauche -->
+    <img src="itaf.PNG" alt="Logo ITAF Lab" class="logo">
+
+    <div class="container">
+        <h2>Analyses de <span id="usernameDisplay"></span></h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom de l'analyse</th>
+                    <th>Résultat</th>
+                    <th>Unité</th>
+                    <th>Référence</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Glucose</td>
+                    <td>1.10</td>
+                    <td>g/L</td>
+                    <td>0.74 - 1.06</td>
+                </tr>
+                <tr>
+                    <td>Cholestérol</td>
+                    <td>2.00</td>
+                    <td>g/L</td>
+                    <td>&lt; 2.00</td>
+                </tr>
+                <tr>
+                    <td>Vitamine A</td>
+                    <td>1.2</td>
+                    <td>mg/L</td>
+                    <td>0.3 - 0.7</td>
+                </tr>
+                <tr>
+                    <td>Vitamine B12</td>
+                    <td>300</td>
+                    <td>pg/mL</td>
+                    <td>200 - 900</td>
+                </tr>
+                <tr>
+                    <td>Vitamine C</td>
+                    <td>50</td>
+                    <td>mg/L</td>
+                    <td>30 - 100</td>
+                </tr>
+                <tr>
+                    <td>Vitamine D</td>
+                    <td>30</td>
+                    <td>ng/mL</td>
+                    <td>20 - 50</td>
+                </tr>
+                <tr>
+                    <td>Vitamine E</td>
+                    <td>12</td>
+                    <td>mg/L</td>
+                    <td>5 - 20</td>
+                </tr>
+                <tr>
+                    <td>Vitamine K</td>
+                    <td>2.5</td>
+                    <td>ng/mL</td>
+                    <td>0.2 - 3.0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Récupérer le nom d'utilisateur depuis l'URL
+        const params = new URLSearchParams(window.location.search);
+        const user = params.get("user");
+        if (user) {
+            document.getElementById("usernameDisplay").textContent = user;
+        } else {
+            document.getElementById("usernameDisplay").textContent = "Inconnu";
+        }
+    </script>
+
+</body>
+</html>

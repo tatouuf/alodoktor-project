@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact ITAF Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('background.PNG'); /* Remplace par l'URL de ton image */
+            background-size: cover; /* L'image couvre tout l'écran */
+            background-position: center; /* L'image est centrée */
+            background-attachment: fixed; /* Fixe l'image lors du défilement */
+            padding: 20px;
+            position: relative;
+            animation: fadeInBackground 3s ease-in-out; /* Animation de fondu pour le background */
+        }
+
+        /* Animation pour le fond d'écran */
+        @keyframes fadeInBackground {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            animation: slideInLogo 2s ease-out; /* Animation de logo */
+        }
+
+        /* Animation du logo */
+        @keyframes slideInLogo {
+            0% {
+                left: -150px;
+            }
+            100% {
+                left: 10px;
+            }
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            animation: fadeInContainer 2s ease-out; /* Animation de la fenêtre du contenu */
+        }
+
+        /* Animation de la fenêtre de contenu */
+        @keyframes fadeInContainer {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background: #2a7cb6;
+            padding: 10px 15px;
+            border-radius: 5px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInLink 3s ease-out; /* Animation pour le lien */
+        }
+
+        /* Animation du lien */
+        @keyframes fadeInLink {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        a:hover {
+            background:#1f6a8b; /* Changement de couleur au survol */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Logo en haut à gauche -->
+    <img src="itaf.PNG" alt="Logo ITAF Lab" class="logo">
+
+    <div class="container">
+        <h2>Contactez-nous</h2>
+        <p><strong>Adresse :</strong> 123 Rue de la Santé, Ville</p>
+        <p><strong>Téléphone :</strong> +216 123 456 789</p>
+        <p><strong>Email :</strong> contact@itaflab.com</p>
+        <a href="menu.html">Retour au menu</a>
+    </div>
+
+</body>
+</html>

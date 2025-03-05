@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composants du Sang</title>
+    <style>
+        /* Positionnement du logo */
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+        }
+        
+        /* Container pour les composants du sang */
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px; /* Pour éviter que le contenu touche le logo */
+        }
+
+        /* Alignement des composants avec texte et image */
+        .component {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: white;
+        }
+
+        /* Style des images pour un alignement vertical uniforme */
+        .component img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin-right: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Alignement du texte avec flexibilité */
+        .text-content {
+            flex: 1;
+        }
+
+        /* Style de la barre de titre (au-dessus de chaque texte) */
+        .component h2 {
+            background-color: #a31d1d;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Style général pour le body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+
+        /* Barre d'entête du site */
+        .header {
+            background-color: #731f1f;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #0b0c0c;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Texte de description des composants */
+        .component p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+        }
+        .footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #0b0c0c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.footer:hover {
+    background-color: #333;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Logo positionné en haut à gauche -->
+    <img src="itaf.PNG" alt="Logo ITAF Lab" class="logo">
+    
+    <div class="header">Composants du Sang</div>
+    <div class="container">
+        <div class="component">
+            <div class="text-content">
+                <h2>Globules rouges</h2>
+                <p>Les globules rouges (également appelés érythrocytes) représentent environ 40 % du volume sanguin. Les globules rouges contiennent de l’hémoglobine, une protéine qui donne au sang sa couleur rouge et lui permet de transporter l’oxygène depuis les poumons vers tous les tissus de l’organisme. Ainsi, grâce à cet oxygène, les cellules produisent l’énergie dont le corps a besoin et libèrent leur dioxyde de carbone, qui est un déchet. Les globules rouges transportent alors le dioxyde de carbone provenant des tissus vers les poumons. Lorsque le nombre de globules rouges est trop bas (anémie), le sang transporte moins d’oxygène, ce qui entraîne l’apparition d’une asthénie et d’une faiblesse. En revanche, lorsque le nombre de globules rouges est trop important (érythrocytose, comme dans la polyglobulie essentielle), le sang peut devenir trop épais, et peut coaguler plus facilement ; cela augmente le risque de crise cardiaque et d’accident vasculaire cérébral.</p>
+            </div>
+            <video width="350" height="250" autoplay loop muted>
+                <source src="globulesr.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+        </div>
+        
+        <div class="component">
+            <div class="text-content">
+                <h2>Globules blancs</h2>
+                <p>Les globules blancs (également appelés leucocytes) sont moins nombreux que les globules rouges : il y a environ 1 globule blanc pour 600 à 700 globules rouges. Les globules blancs sont principalement responsables de la défense de l’organisme contre les infections. Il existe cinq grands types de globules blancs : Neutrophiles, Lymphocytes, Monocytes, Éosinophiles, Basophiles. Les neutrophiles sont les plus nombreux ; ils protègent l’organisme des infections en tuant et en phagocytant les bactéries et les champignons, et en phagocytant les corps étrangers. Les lymphocytes sont composés de trois grands types : Les cellules T (lymphocytes T) et les cellules tueuses naturelles (ou cellules T cytotoxiques), qui contribuent à protéger des infections virales et peuvent reconnaître et détruire certaines cellules cancéreuses, et les cellules B (lymphocytes B) qui se transforment en cellules productrices d’anticorps. Les monocytes ingèrent les cellules mortes ou endommagées et contribuent à la défense contre de nombreux micro-organismes infectieux. Les éosinophiles tuent les parasites, détruisent les cellules cancéreuses et interviennent dans les réactions allergiques. Les basophiles interviennent également dans les réactions allergiques</p>
+            </div>
+            <video width="350" height="250" autoplay loop muted>
+                <source src="globulesb.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+        </div>
+        
+        <div class="component">
+            <div class="text-content">
+                <h2>Plaquettes</h2>
+                <p>Les plaquettes (également appelées thrombocytes) sont des fragments cellulaires plus petits que les globules rouges ou blancs. Elles sont moins nombreuses que les globules rouges ; il y a 1 plaquette pour 20 globules rouges. Elles contribuent au processus de coagulation en se regroupant au point de saignement pour former un bouchon qui obstrue le vaisseau sanguin. De plus, elles libèrent simultanément des substances qui favorisent la coagulation. Lorsque le nombre de plaquettes est trop bas (thrombocytopénie), les ecchymoses et les saignements anormaux deviennent plus probables. Si le nombre de plaquettes est trop important (thrombocytémie), le sang peut coaguler de façon excessive, obstruer des vaisseaux sanguins et provoquer un accident ischémique transitoire. Lorsque le nombre de plaquettes est extrêmement élevé, les plaquettes peuvent absorber les protéines de coagulation et provoquer paradoxalement des saignements.</p>
+            </div>
+            <video width="350" height="250" autoplay loop muted>
+                <source src="plaquettes.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+        </div>
+
+        <div class="component">
+            <div class="text-content">
+                <h2>Plasma</h2>
+                <p>Le plasma est la partie liquide du sang, dans laquelle les globules rouges, les globules blancs et les plaquettes sont en suspension. Il constitue plus de la moitié du volume du sang et est composé principalement d’eau dans laquelle sont dissous des sels minéraux (les électrolytes) et des protéines. L’albumine est la principale protéine du plasma. L’albumine contribue à empêcher les liquides de s’écouler hors des vaisseaux sanguins pour pénétrer dans les tissus. Par ailleurs, elle transporte de nombreuses substances qui se lient à elle, comme les hormones et certains médicaments. D’autres protéines se trouvent dans le plasma, comme les anticorps (immunoglobulines) qui protègent activement l’organisme contre les virus, les bactéries, les champignons, les cellules tumorales et les facteurs de coagulation, qui contrôlent les saignements. Le plasma a d’autres fonctions : Il agit comme un réservoir. Il permet de maintenir la pression artérielle et la circulation sanguine. Il permet de maintenir la température corporelle</p>
+            </div>
+            <video width="350" height="250" autoplay loop muted>
+                <source src="plasma.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+
+        </div>
+    </div>
+    <div class="footer" onclick="window.location.href='menu.html'">
+        Retour au menu
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos de ITAF Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 20px;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px; /* Ajuste la taille selon tes besoins */
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px; /* Pour éviter le chevauchement avec le logo */
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background: #004b80;
+            padding: 10px 15px;
+            border-radius: 5px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        a:hover {
+            background: #2a7cb6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo en haut à gauche -->
+    <img src="itaf.PNG" alt="Logo ITAF Lab" class="logo">
+
+    <div class="container">
+        <h2>À propos de ITAF Lab</h2>
+        <p>Bienvenue sur la page de présentation de ITAF Lab.</p>
+
+        <!-- Vidéo au-dessus du bouton -->
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="capt.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo.
+            </video>
+        </div>
+
+        <a href="menu.html">Retour au menu</a>
+    </div>
+
+</body>
+</html>

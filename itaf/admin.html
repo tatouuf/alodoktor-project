@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prendre un Rendez-vous</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            padding: 20px;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label, input {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        input {
+            padding: 8px;
+            width: 80%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 15px;
+            background: #004b80;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #003366;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background: #004b80;
+            padding: 10px 15px;
+            border-radius: 5px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        a:hover {
+            background: #003366;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo en haut à gauche -->
+    <img src="itaf.PNG" alt="Logo ITAF Lab" class="logo">
+
+    <div class="container">
+        <h2>Prise de Rendez-vous</h2>
+        <form>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" required>
+            
+            <label for="date">Date :</label>
+            <input type="date" id="date" required>
+            
+            <label for="heure">Heure :</label>
+            <input type="time" id="heure" required>
+            
+            <button type="submit">Valider</button>
+        </form>
+        
+        <a href="menu.html">Retour au menu</a>
+    </div>
+
+</body>
+</html>

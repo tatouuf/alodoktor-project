@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> prenez un rendez vous en ligne - ITAF Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('back.PNG'); /* Remplacez par le chemin de votre image */
+            background-size: cover; /* L'image couvre toute la page */
+            background-position: center; /* L'image est centrée */
+            background-repeat: no-repeat; /* L'image ne se répète pas */
+            padding: 20px;
+            position: relative;
+            color: white; /* Changer la couleur du texte pour qu'il soit lisible sur l'image de fond */
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8); /* Fond semi-transparent pour améliorer la lisibilité */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            color: black; /* Rétablir la couleur du texte à l'intérieur du conteneur */
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .calendar div {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.9); /* Fond semi-transparent pour les jours */
+        }
+
+        .calendar div:hover {
+            background-color: rgba(240, 240, 240, 0.9); /* Fond semi-transparent au survol */
+        }
+
+        .calendar div.selected {
+            background-color: rgb(177, 15, 15);
+            color: white;
+        }
+
+        .month-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .month-navigation button {
+            background: rgb(177, 15, 15);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .month-navigation button:hover {
+            background: rgb(0, 0, 0);
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background: rgb(177, 15, 15);
+            padding: 10px 15px;
+            border-radius: 5px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        a:hover {
+            background: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo en haut à gauche -->
+    <img src="itaf.PNG" alt="Logo ITAF Lab" class="logo">
+
+    <div class="container">
+        <h2>prenez un rendez vous en ligne</h2>
+        <div class="month-navigation">
+            <button id="prevMonth">Mois précédent</button>
+            <h3 id="currentMonthYear"></h3>
+            <button id="nextMonth">Mois suivant</button>
+        </div>
+        <div class="calendar" id="calendar"></div>
+        <a href="menu.html">Retour au menu</a>
+    </div>
+
+    <script>
+        const months = [
+            "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+            "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
+        ];
+
+        let currentDate = new Date(2025, 0, 1); // 1er janvier 2025
+
+        function renderCalendar(date) {
+            const calendar = document.getElementById('calendar');
+            const currentMonthYear = document.getElementById('currentMonthYear');
+            calendar.innerHTML = '';
+
+            const year = date.getFullYear();
+            const month = date.getMonth();
+
+            currentMonthYear.textContent = `${months[month]} ${year}`;
+
+            const firstDayOfMonth = new Date(year, month, 1);
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const startingDay = firstDayOfMonth.getDay();
+
+            // Ajouter les jours de la semaine
+            const daysOfWeek = ["LUN", "MAR", "MER", "JEU", "VEN", "SAM", "DIM"];
+            daysOfWeek.forEach(day => {
+                const dayElement = document.createElement('div');
+                dayElement.textContent = day;
+                dayElement.style.fontWeight = 'bold';
+                calendar.appendChild(dayElement);
+            });
+
+            // Ajouter les jours vides avant le premier jour du mois
+            for (let i = 0; i < startingDay - 1; i++) {
+                const emptyDay = document.createElement('div');
+                calendar.appendChild(emptyDay);
+            }
+
+            // Ajouter les jours du mois
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayElement = document.createElement('div');
+                dayElement.textContent = day;
+                dayElement.addEventListener('click', () => {
+                    document.querySelectorAll('.calendar div').forEach(d => d.classList.remove('selected'));
+                    dayElement.classList.add('selected');
+                    alert(`Vous avez sélectionné le ${day} ${months[month]} ${year}`);
+                });
+                calendar.appendChild(dayElement);
+            }
+        }
+
+        document.getElementById('prevMonth').addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar(currentDate);
+        });
+
+        document.getElementById('nextMonth').addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar(currentDate);
+        });
+
+        // Initialiser le calendrier
+        renderCalendar(currentDate);
+        <p id="reservationCount"></p>
+    </script>
+    <script src="coordonnees.js"></script> <!-- Lien vers ton fichier JavaScript -->
+</body>
+</html>

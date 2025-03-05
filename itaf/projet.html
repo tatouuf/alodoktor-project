@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - ITAF Lab</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background-color: #f8f8f8;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .welcome-section {
+            width: 100%;
+            height: 100vh;
+            background: url('welcome.JPG') no-repeat center center/cover;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .logo-img {
+            width: 80px;
+            height: auto;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(0); }
+        }
+
+        .form-box {
+            width: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+            animation: fadeInForm 1s ease-in-out;
+        }
+
+        @keyframes fadeInForm {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .header {
+            background: rgb(177, 15, 15);
+            color: white;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 30px;
+        }
+
+        .logo span {
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .doctor-name {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .form-container {
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 14px;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+        .btn {
+            width: 100%;
+            background: rgb(177, 15, 15);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: rgb(150, 10, 10);
+        }
+
+        footer {
+            background: white;
+            padding: 10px;
+            font-size: 12px;
+            color: #1e1f39;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="welcome-section">
+        <div class="logo-container">
+            <img src="itaf.PNG" alt="Logo ITAF Lab" class="logo-img">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-box">
+            <div class="header">
+                <h1 class="logo">ITAF <span>Lab</span></h1>
+                <p class="subtitle">Laboratoire d'Analyses Médicales</p>
+                <p class="doctor-name">itaf <strong>haamdi</strong></p>
+            </div>
+
+            <div class="form-container">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username" placeholder="Entrez votre nom d'utilisateur">
+                <p id="usernameError" class="error-message"></p>
+
+                <label for="password">Mot de passe (CIN)</label>
+                <input type="password" id="password" name="password" placeholder="Entrez votre CIN">
+                <p id="passwordError" class="error-message"></p>
+
+                <button class="btn" id="connexionBtn" type="button">Connexion</button>
+            </div>
+
+            <footer>
+                <p>&copy; 2025 Esprit.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="nomcin.js"></script>
+
+</body>
+
+</html>
